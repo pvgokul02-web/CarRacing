@@ -1,0 +1,6 @@
+{
+  "name": "3D Supercar Racing Game",
+  "description": "An arcade car racing game featuring a high-speed 2D physics engine, multiple AI competitors, customizable vehicle upgrades, and live commentaries powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

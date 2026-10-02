@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Orbitron", sans-serif;
+  --font-speed: "Syne", sans-serif;
+}
+
+body {
+  background-color: #050506;
+  color: #fafafa;
+  font-family: var(--font-sans);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(239, 68, 68, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.08) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Carbon Fiber Texture */
+.nfs-carbon {
+  background-color: #0d0d10;
+  background-image: 
+    linear-gradient(45deg, #131317 25%, transparent 25%), 
+    linear-gradient(-45deg, #131317 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #131317 75%), 
+    linear-gradient(-45deg, transparent 75%, #131317 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+}
+
+/* Metallic Tech Finish */
+.nfs-metal {
+  background: linear-gradient(135deg, #16161c 0%, #0c0c0f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Diagonal speedline striping */
+.nfs-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 4px,
+    transparent 4px,
+    transparent 12px
+  );
+}
+
+/* Speed orange highlight bar stripes */
+.nfs-stripes-orange {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(245, 158, 11, 0.15),
+    rgba(245, 158, 11, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Red speed stripes */
+.nfs-stripes-red {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(239, 68, 68, 0.2),
+    rgba(239, 68, 68, 0.2) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Custom glow animations for nitro boosts, speeds, checkpoints */
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px #22c55e, inset 0 0 4px #22c55e;
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px #22c55e, inset 0 0 10px #22c55e;
+  }
+}
+
+.bento-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  animation: status-pulse 2s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d2d34;
+}
